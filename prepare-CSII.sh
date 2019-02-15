@@ -1,4 +1,7 @@
 #!/bin/bash
 
-git clone git@github.com:idsc-frazzoli/CS2_2019HWexercises.git .
-git pull
+cd ~/CSII
+git fetch
+git checkout .
+git checkout master
+git pull origin master
