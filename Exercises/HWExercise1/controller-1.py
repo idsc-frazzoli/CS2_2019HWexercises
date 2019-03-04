@@ -5,7 +5,7 @@ class Controller():
 
         # Gains for controller
 	print "initialized controller"
-        self.k_P = 10
+        self.k_P = 1
 
 
     # Inputs:   d_est   Estimation of distance from lane center (positve when
