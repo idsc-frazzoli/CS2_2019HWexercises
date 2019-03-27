@@ -1,5 +1,7 @@
 connect-%: 
-	bash -c "docker -H $* run -it --net host --privileged -v /data:/data --name exercises lapandic/rpi-duckiebot-cs2:latest"
+	bash -c "docker -H $* rm exercises || echo "Everything is ok" "
+	bash -c "docker -H $* pull duckietown/rpi-duckiebot-cs2:latest " 
+	bash -c "docker -H $* run -it --net host --privileged -v /data:/data --name exercises duckietown/rpi-duckiebot-cs2:latest"
 	bash -c "docker -H $* start exercises"
 	bash -c "docker -H $* exec -it exercises /bin/bash"
 
