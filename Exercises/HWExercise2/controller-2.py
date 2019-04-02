@@ -12,4 +12,6 @@ class Controller():
         v_out = self.v_ref*(rho-self.rho_ref)*5
         omega_out = -5 * theta
         
+        #TODO: Implement your own follow-the-leader controller
+        
         return (v_out, omega_out)
