@@ -31,7 +31,7 @@ class Controller():
         #TODO
         
         #Calculate control input omega_out
-        omega_out = #TODO
+        omega_out = 0 #TODO
         v_out = v_ref   
 
         return (v_out, omega_out)
