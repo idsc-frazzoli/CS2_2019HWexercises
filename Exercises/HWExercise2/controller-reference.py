@@ -8,8 +8,8 @@ class Controller():
 
         self.C_I = 0
 
-        self.Q_u = numpy.array ([[3.5,0, 0], [0, 4.5, 0], [0, 0, 1.4]])  #changes: 20-->20 100-->120
-        self.Norm=numpy.array([[1,0,0],[0,0.1,0],[0,0,0.2]])
+        self.Q_u = numpy.array ([[4,0, 0], [0, 4.5, 0], [0, 0, 2]])
+        self.Norm=numpy.array([[2,0,0],[0,0.1,0],[0,0,0.02]])
         self.Q=self.Q_u*self.Norm;
 
         self.R = numpy.array ([[0.1*0.25]])
@@ -31,5 +31,6 @@ class Controller():
 
         v_out = 0.8*v_ref
         omega_out = -G.dot(X)
-
-        return (v_out, omega_out)
+        
+        #Adjust speed depending on duckiebot
+        return (1.2*v_out, omega_out)
