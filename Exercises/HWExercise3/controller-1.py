@@ -22,7 +22,9 @@ class Controller():
 
         # Output:   v_out       velocity of Duckiebot [m/s]
         #           omega_out   angular velocity of Duckiebot [rad/s
-        
+       
+        return
+
     def getControlOutput(self, d_est, phi_est, d_ref, phi_ref, v_ref, t_delay, dt_last):
         #Exception handler for dt_last==0
         if (dt_last==0) : dt_last=0.0001
