@@ -14,3 +14,8 @@ copy-from-%:
 change-trim-%: 
 	bash -c "docker -H $* exec -it exercises bash -c 'source /home/software/docker/env.sh && rosservice call /$*/inverse_kinematics_node/set_trim -- $(trim)'"
 	@echo "Changed trim for $* to $(trim)"
+
+
+change-gain-%: 
+	bash -c "docker -H $* exec -it exercises bash -c 'source /home/software/docker/env.sh && rosservice call /$*/inverse_kinematics_node/set_gain -- $(gain)'"
+	@echo "Changed gain for $* to $(gain)"
